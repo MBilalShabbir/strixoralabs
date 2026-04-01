@@ -1,0 +1,17 @@
+<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="32" height="32" rx="8" fill="#6366f1"/>
+  <!-- Owl body -->
+  <path d="M16 5 L23 11 L23 22 Q23 27 16 27 Q9 27 9 22 L9 11 Z" fill="#4338ca"/>
+  <!-- Left ear tuft -->
+  <path d="M10.5 11 L9 7 L13 10 Z" fill="#a5b4fc"/>
+  <!-- Right ear tuft -->
+  <path d="M21.5 11 L23 7 L19 10 Z" fill="#a5b4fc"/>
+  <!-- Left eye -->
+  <circle cx="12.5" cy="15.5" r="3" fill="#1e1b4b"/>
+  <circle cx="12.5" cy="15.5" r="1.4" fill="white" opacity="0.95"/>
+  <!-- Right eye -->
+  <circle cx="19.5" cy="15.5" r="3" fill="#1e1b4b"/>
+  <circle cx="19.5" cy="15.5" r="1.4" fill="white" opacity="0.95"/>
+  <!-- Beak -->
+  <path d="M16 18.5 L14 21 L18 21 Z" fill="#fbbf24"/>
+</svg>

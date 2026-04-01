@@ -1,0 +1,143 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─────────────────────────────────────────────────────────
+   BASE
+───────────────────────────────────────────────────────── */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    background-color: #080810;
+    color: #f8f8ff;
+    font-feature-settings: "cv11", "ss01", "cv01", "cv03";
+  }
+}
+
+/* ─────────────────────────────────────────────────────────
+   SELECTION
+───────────────────────────────────────────────────────── */
+::selection {
+  background: rgba(99, 102, 241, 0.28);
+  color: #fff;
+}
+
+/* ─────────────────────────────────────────────────────────
+   SCROLLBAR — thin, dark, premium
+───────────────────────────────────────────────────────── */
+::-webkit-scrollbar        { width: 5px; }
+::-webkit-scrollbar-track  { background: transparent; }
+::-webkit-scrollbar-thumb  {
+  background: rgba(99, 102, 241, 0.25);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(99, 102, 241, 0.45);
+}
+
+/* ─────────────────────────────────────────────────────────
+   UTILITIES
+───────────────────────────────────────────────────────── */
+@layer utilities {
+  /* ── Gradient text ── */
+  .text-gradient {
+    background: linear-gradient(135deg, #a5b4fc 0%, #818cf8 40%, #c4b5fd 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* ── Glass surfaces ── */
+  .glass {
+    backdrop-filter: blur(16px) saturate(160%);
+    -webkit-backdrop-filter: blur(16px) saturate(160%);
+    background: rgba(8, 8, 16, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.055);
+  }
+
+  /* ── Cards ── */
+  .card-surface {
+    background: #0d0d14;
+    border: 1px solid rgba(255, 255, 255, 0.055);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  }
+
+  .card-surface-hover {
+    background: #111119;
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.5), 0 1px 3px rgba(0, 0, 0, 0.3),
+                inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  }
+
+  /* ── Brand glow border ── */
+  .border-glow {
+    border: 1px solid rgba(99, 102, 241, 0.22);
+    box-shadow: 0 0 0 1px rgba(99, 102, 241, 0.08),
+                0 0 20px rgba(99, 102, 241, 0.1);
+  }
+
+  /* ── Noise overlay — adds texture without weight ── */
+  .noise::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* ── Shimmer loading skeleton ── */
+  .shimmer {
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.04) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    background-size: 400px 100%;
+    animation: shimmer 1.8s linear infinite;
+  }
+
+  /* ── Text balance for headings ── */
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* ── Section divider fade ── */
+  .section-fade-b {
+    -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+  }
+
+  /* ── Animation delays ── */
+  .delay-75  { animation-delay:  75ms; }
+  .delay-100 { animation-delay: 100ms; }
+  .delay-150 { animation-delay: 150ms; }
+  .delay-200 { animation-delay: 200ms; }
+  .delay-300 { animation-delay: 300ms; }
+  .delay-400 { animation-delay: 400ms; }
+  .delay-500 { animation-delay: 500ms; }
+}
+
+/* ─────────────────────────────────────────────────────────
+   COMPONENTS
+───────────────────────────────────────────────────────── */
+@layer components {
+  /* ── Subtle section separator line ── */
+  .section-line {
+    @apply w-full h-px bg-gradient-to-r from-transparent via-white/8 to-transparent;
+  }
+
+  /* ── Pill badge / label ── */
+  .chip {
+    @apply inline-flex items-center gap-1.5 rounded-full px-3.5 py-1
+           text-xs font-semibold tracking-wide
+           border border-brand-500/20 bg-brand-500/10 text-brand-300;
+  }
+}
