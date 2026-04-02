@@ -6,7 +6,6 @@ import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
-import { ThemeToggle } from "@/components/ui/ThemeToggle";
 import { OwlLogo } from "@/components/brand/OwlLogo";
 
 const navLinks = [
@@ -83,7 +82,6 @@ export function Navbar() {
 
           {/* ── Right actions ── */}
           <div className="hidden md:flex items-center gap-2.5">
-            <ThemeToggle />
             <Link
               href="/contact"
               className={cn(
@@ -101,7 +99,6 @@ export function Navbar() {
 
           {/* ── Mobile ── */}
           <div className="flex md:hidden items-center gap-2">
-            <ThemeToggle />
             <button
               onClick={() => setMobileOpen((v) => !v)}
               className={cn(
