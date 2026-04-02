@@ -147,8 +147,8 @@ export function ProjectsGrid() {
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.6, delay: (i % 2) * 0.1, ease: [0.22, 1, 0.36, 1] }}
               className={cn(
-                "group relative flex flex-col rounded-3xl border bg-[#0f0f1a] overflow-hidden",
-                "hover:border-white/12 transition-all duration-300",
+                "group relative flex flex-col rounded-3xl border bg-panel-alt overflow-hidden",
+                "hover:border-rule/12 transition-all duration-300",
                 project.accentColor
               )}
             >
@@ -163,27 +163,27 @@ export function ProjectsGrid() {
                     <Badge variant={project.badgeVariant} className="mb-2">
                       {project.category}
                     </Badge>
-                    <h2 className="text-xl font-bold text-white">{project.title}</h2>
-                    <p className="text-sm text-gray-500">{project.subtitle}</p>
+                    <h2 className="text-xl font-bold text-ink">{project.title}</h2>
+                    <p className="text-sm text-ink/40">{project.subtitle}</p>
                   </div>
-                  <div className="flex-shrink-0 w-8 h-8 rounded-xl bg-white/5 border border-white/8 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                    <ArrowUpRight className="w-4 h-4 text-brand-400" />
+                  <div className="flex-shrink-0 w-8 h-8 rounded-xl bg-wash/5 border border-rule/8 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                    <ArrowUpRight className="w-4 h-4 text-brand-500" />
                   </div>
                 </div>
 
-                <p className="text-sm text-gray-400 leading-relaxed mb-5">
+                <p className="text-sm text-ink/45 leading-relaxed mb-5">
                   {project.description}
                 </p>
 
                 {/* Challenge + Outcome */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-5">
-                  <div className="p-3 rounded-xl bg-white/3 border border-white/5">
-                    <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-1">Challenge</p>
-                    <p className="text-xs text-gray-400 leading-relaxed">{project.challenge}</p>
+                  <div className="p-3 rounded-xl bg-wash/3 border border-rule/5">
+                    <p className="text-xs font-semibold text-ink/40 uppercase tracking-wide mb-1">Challenge</p>
+                    <p className="text-xs text-ink/45 leading-relaxed">{project.challenge}</p>
                   </div>
-                  <div className="p-3 rounded-xl bg-white/3 border border-white/5">
-                    <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-1">Outcome</p>
-                    <p className="text-xs text-gray-400 leading-relaxed">{project.outcome}</p>
+                  <div className="p-3 rounded-xl bg-wash/3 border border-rule/5">
+                    <p className="text-xs font-semibold text-ink/40 uppercase tracking-wide mb-1">Outcome</p>
+                    <p className="text-xs text-ink/45 leading-relaxed">{project.outcome}</p>
                   </div>
                 </div>
 
@@ -191,8 +191,8 @@ export function ProjectsGrid() {
                 <div className="flex gap-4 mb-5">
                   {project.metrics.map((m) => (
                     <div key={m.label}>
-                      <div className="text-lg font-bold text-white">{m.value}</div>
-                      <div className="text-xs text-gray-600">{m.label}</div>
+                      <div className="text-lg font-bold text-ink">{m.value}</div>
+                      <div className="text-xs text-ink/35">{m.label}</div>
                     </div>
                   ))}
                 </div>
@@ -202,7 +202,7 @@ export function ProjectsGrid() {
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="px-2.5 py-0.5 rounded-md bg-white/5 border border-white/6 text-xs text-gray-500 font-medium"
+                      className="px-2.5 py-0.5 rounded-md bg-wash/5 border border-rule/6 text-xs text-ink/40 font-medium"
                     >
                       {tag}
                     </span>

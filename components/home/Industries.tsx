@@ -14,7 +14,7 @@ const industries = [
     name: "Healthtech",
     desc: "Compliance isn't a feature — it's a baseline. HIPAA, NHS Digital, HL7 FHIR. We've shipped clinical software with real stakes.",
     href: "/industries#healthtech",
-    clr: "text-rose-400",
+    clr: "text-rose-500",
     bg:  "bg-rose-500/8",
     bdr: "border-rose-500/15 hover:border-rose-500/35",
     glow: "hover:shadow-[0_0_28px_rgba(244,63,94,.1)]",
@@ -24,7 +24,7 @@ const industries = [
     name: "Edtech",
     desc: "Learning platforms that scale from a single institution to a national network — without re-architecting at every stage.",
     href: "/industries#edtech",
-    clr: "text-sky-400",
+    clr: "text-sky-500",
     bg:  "bg-sky-500/8",
     bdr: "border-sky-500/15 hover:border-sky-500/35",
     glow: "hover:shadow-[0_0_28px_rgba(56,189,248,.1)]",
@@ -34,7 +34,7 @@ const industries = [
     name: "Martech",
     desc: "Attribution models that don't lie. Real-time data pipelines that give your team visibility, not vanity metrics.",
     href: "/industries#martech",
-    clr: "text-purple-400",
+    clr: "text-purple-500",
     bg:  "bg-purple-500/8",
     bdr: "border-purple-500/15 hover:border-purple-500/35",
     glow: "hover:shadow-[0_0_28px_rgba(168,85,247,.1)]",
@@ -44,7 +44,7 @@ const industries = [
     name: "Fintech",
     desc: "PCI-DSS, PSD2, SOC 2. We've built compliant payment systems and fraud detection engines with real money on the line.",
     href: "/industries#fintech",
-    clr: "text-emerald-400",
+    clr: "text-emerald-500",
     bg:  "bg-emerald-500/8",
     bdr: "border-emerald-500/15 hover:border-emerald-500/35",
     glow: "hover:shadow-[0_0_28px_rgba(52,211,153,.1)]",
@@ -54,7 +54,7 @@ const industries = [
     name: "Greentech",
     desc: "Sustainability that's measurable. IoT telemetry, carbon accounting, and CSRD-ready reporting infrastructure.",
     href: "/industries#greentech",
-    clr: "text-teal-400",
+    clr: "text-teal-500",
     bg:  "bg-teal-500/8",
     bdr: "border-teal-500/15 hover:border-teal-500/35",
     glow: "hover:shadow-[0_0_28px_rgba(45,212,191,.1)]",
@@ -81,11 +81,11 @@ export function Industries() {
           className="flex flex-col items-center text-center mb-20"
         >
           <SectionLabel className="mb-5">Industries</SectionLabel>
-          <h2 className="text-[clamp(2rem,4vw,3.25rem)] font-extrabold tracking-tighter text-white text-balance leading-tight">
+          <h2 className="text-[clamp(2rem,4vw,3.25rem)] font-extrabold tracking-tighter text-ink text-balance leading-tight">
             We know your industry.{" "}
             <span className="text-gradient">Not just your stack.</span>
           </h2>
-          <p className="mt-4 text-base text-white/40 max-w-md text-balance leading-relaxed">
+          <p className="mt-4 text-base text-ink/40 max-w-md text-balance leading-relaxed">
             Domain knowledge is why our code survives first contact with regulation, compliance, and real users.
           </p>
         </motion.div>
@@ -113,8 +113,8 @@ export function Industries() {
                 <div className={cn("w-9 h-9 rounded-xl flex items-center justify-center mb-4", ind.bg)}>
                   <ind.icon className={cn("w-4.5 h-4.5", ind.clr)} strokeWidth={1.75} />
                 </div>
-                <h3 className="text-[14px] font-semibold text-white mb-1.5">{ind.name}</h3>
-                <p className="text-[12px] text-white/38 leading-relaxed">{ind.desc}</p>
+                <h3 className="text-[14px] font-semibold text-ink mb-1.5">{ind.name}</h3>
+                <p className="text-[12px] text-ink/38 leading-relaxed">{ind.desc}</p>
               </Link>
             </motion.div>
           ))}

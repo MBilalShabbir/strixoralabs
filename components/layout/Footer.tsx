@@ -36,7 +36,7 @@ const socialLinks = [
 
 export function Footer() {
   return (
-    <footer className="relative mt-20 border-t border-white/[0.055]" style={{ background: "#060608" }}>
+    <footer className="relative mt-20 border-t border-rule/[0.055] bg-floor">
       {/* Top shimmer */}
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-brand-500/25 to-transparent" />
 
@@ -47,17 +47,17 @@ export function Footer() {
           <div className="col-span-2">
             <Link href="/" className="inline-flex items-center gap-2.5 mb-4 group">
               <OwlLogo className="w-7 h-7" />
-              <span className="text-[14px] font-semibold text-white/80 group-hover:text-white transition-colors">
-                Strixora<span className="text-brand-400 ml-0.5">Labs</span>
+              <span className="text-[14px] font-semibold text-ink/80 group-hover:text-ink transition-colors">
+                Strixora<span className="text-brand-500 ml-0.5">Labs</span>
               </span>
             </Link>
-            <p className="text-[13px] text-white/30 leading-relaxed max-w-[240px] mb-7">
+            <p className="text-[13px] text-ink/30 leading-relaxed max-w-[240px] mb-7">
               Building intelligent systems that drive growth, efficiency, and
               real-world impact.
             </p>
 
             {/* Newsletter */}
-            <p className="text-[11px] font-semibold uppercase tracking-[0.08em] text-white/22 mb-3">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.08em] text-ink/22 mb-3">
               Stay updated
             </p>
             <NewsletterForm />
@@ -71,7 +71,7 @@ export function Footer() {
                   target={href.startsWith("mailto") ? undefined : "_blank"}
                   rel="noopener noreferrer"
                   aria-label={label}
-                  className="w-8 h-8 flex items-center justify-center rounded-lg bg-white/4 border border-white/7 text-white/30 hover:text-white/70 hover:bg-white/8 hover:border-white/12 transition-all duration-200"
+                  className="w-8 h-8 flex items-center justify-center rounded-lg bg-wash/4 border border-rule/7 text-ink/30 hover:text-ink/70 hover:bg-wash/8 hover:border-rule/12 transition-all duration-200"
                 >
                   <Icon className="w-3.5 h-3.5" />
                 </a>
@@ -82,7 +82,7 @@ export function Footer() {
           {/* ── Nav columns ── */}
           {Object.entries(footerLinks).map(([section, links]) => (
             <div key={section} className="col-span-1">
-              <p className="text-[11px] font-semibold uppercase tracking-[0.08em] text-white/22 mb-4">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.08em] text-ink/22 mb-4">
                 {section}
               </p>
               <ul className="space-y-2.5">
@@ -90,7 +90,7 @@ export function Footer() {
                   <li key={href}>
                     <Link
                       href={href}
-                      className="text-[13px] text-white/35 hover:text-white/70 transition-colors duration-150"
+                      className="text-[13px] text-ink/35 hover:text-ink/70 transition-colors duration-150"
                     >
                       {label}
                     </Link>
@@ -102,8 +102,8 @@ export function Footer() {
         </div>
 
         {/* ── Bottom bar ── */}
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-white/[0.05] pt-8">
-          <p className="text-[12px] text-white/20">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-rule/[0.05] pt-8">
+          <p className="text-[12px] text-ink/20">
             © {new Date().getFullYear()} Strixora Labs. All rights reserved.
           </p>
           <div className="flex items-center gap-5">
@@ -111,7 +111,7 @@ export function Footer() {
               <Link
                 key={item}
                 href="#"
-                className="text-[12px] text-white/20 hover:text-white/45 transition-colors"
+                className="text-[12px] text-ink/20 hover:text-ink/45 transition-colors"
               >
                 {item}
               </Link>

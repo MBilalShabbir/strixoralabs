@@ -21,17 +21,17 @@ const variantStyles: Record<Variant, string> = {
     "active:bg-brand-700 active:shadow-none active:scale-[0.985]"
   ),
   secondary: cn(
-    "bg-white/5 text-white/70 hover:text-white",
-    "border border-white/10 hover:border-white/18",
-    "shadow-[inset_0_1px_0_rgba(255,255,255,.05)]",
-    "hover:bg-white/8"
+    "bg-wash/5 text-ink/70 hover:text-ink",
+    "border border-rule/10 hover:border-rule/18",
+    "shadow-[inset_0_1px_0_rgba(255,255,255,.04)]",
+    "hover:bg-wash/8"
   ),
   ghost: cn(
-    "text-white/50 hover:text-white",
-    "hover:bg-white/6"
+    "text-ink/50 hover:text-ink",
+    "hover:bg-wash/6"
   ),
   outline: cn(
-    "border border-brand-500/35 text-brand-400",
+    "border border-brand-500/35 text-brand-500",
     "hover:bg-brand-500/8 hover:border-brand-400/60"
   ),
 };
@@ -51,7 +51,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         className={cn(
           "inline-flex items-center justify-center font-semibold",
           "transition-all duration-200 ease-out",
-          "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500/70 focus-visible:ring-offset-2 focus-visible:ring-offset-[#080810]",
+          "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500/70 focus-visible:ring-offset-2 focus-visible:ring-offset-canvas",
           "disabled:opacity-40 disabled:cursor-not-allowed disabled:pointer-events-none",
           variantStyles[variant],
           sizeStyles[size],

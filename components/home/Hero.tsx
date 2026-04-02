@@ -34,14 +34,14 @@ export function Hero() {
 
       {/* ── Layered background ── */}
       {/* 1. Base */}
-      <div className="absolute inset-0 bg-[#080810]" />
+      <div className="absolute inset-0 bg-canvas" />
 
       {/* 2. Aurora / glow */}
       <div
         className="absolute inset-x-0 top-0 h-[70vh] pointer-events-none"
         style={{
           background:
-            "radial-gradient(ellipse 90% 60% at 50% -5%, rgba(99,102,241,.2) 0%, rgba(139,92,246,.08) 45%, transparent 70%)",
+            "radial-gradient(ellipse 90% 60% at 50% -5%, rgba(99,102,241,.16) 0%, rgba(139,92,246,.07) 45%, transparent 70%)",
         }}
       />
 
@@ -50,24 +50,15 @@ export function Hero() {
         className="absolute top-0 left-0 w-1/2 h-full pointer-events-none"
         style={{
           background:
-            "radial-gradient(600px circle at 0% 30%, rgba(99,102,241,.06), transparent 60%)",
+            "radial-gradient(600px circle at 0% 30%, rgba(99,102,241,.05), transparent 60%)",
         }}
       />
 
-      {/* 4. Fine grid */}
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          backgroundImage:
-            "linear-gradient(rgba(255,255,255,.022) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.022) 1px, transparent 1px)",
-          backgroundSize: "36px 36px",
-          maskImage: "radial-gradient(ellipse 80% 80% at 50% 50%, black, transparent)",
-          WebkitMaskImage: "radial-gradient(ellipse 80% 80% at 50% 50%, black, transparent)",
-        }}
-      />
+      {/* 4. Fine grid — adaptive via CSS class */}
+      <div className="absolute inset-0 pointer-events-none grid-hero" />
 
-      {/* 5. Bottom fade */}
-      <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[#080810] to-transparent pointer-events-none" />
+      {/* 5. Bottom fade — fades to canvas color */}
+      <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-canvas to-transparent pointer-events-none" />
 
       {/* ── Content ── */}
       <div className="relative w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-24 flex flex-col items-center text-center">
@@ -80,7 +71,7 @@ export function Hero() {
           {/* Eyebrow chip */}
           <motion.div variants={item}>
             <div className="chip mb-8">
-              <span className="w-1.5 h-1.5 rounded-full bg-brand-400 animate-pulse-dot" />
+              <span className="w-1.5 h-1.5 rounded-full bg-brand-500 animate-pulse-dot" />
               Senior-only · Selective · Currently available
             </div>
           </motion.div>
@@ -90,7 +81,7 @@ export function Hero() {
             variants={item}
             className={cn(
               "max-w-[16ch] text-[clamp(2.8rem,7vw,5.5rem)] font-extrabold tracking-tighter leading-[1.04]",
-              "text-white text-balance"
+              "text-ink text-balance"
             )}
           >
             We build software your competitors{" "}
@@ -100,7 +91,7 @@ export function Hero() {
           {/* Subheading */}
           <motion.p
             variants={item}
-            className="mt-6 max-w-[52ch] text-[clamp(1rem,1.5vw,1.2rem)] text-white/45 leading-[1.7] text-balance"
+            className="mt-6 max-w-[52ch] text-[clamp(1rem,1.5vw,1.2rem)] text-ink/45 leading-[1.7] text-balance"
           >
             Strixora Labs is a senior-only engineering firm specialising in AI systems,
             Fintech infrastructure, and scalable product development. We take full
@@ -122,7 +113,7 @@ export function Hero() {
                 "transition-all duration-200",
                 "shadow-[inset_0_1px_0_rgba(255,255,255,.12),0_1px_3px_rgba(0,0,0,.5)]",
                 "hover:shadow-[inset_0_1px_0_rgba(255,255,255,.15),0_0_0_1px_rgba(99,102,241,.45),0_6px_20px_rgba(99,102,241,.3)]",
-                "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2 focus-visible:ring-offset-[#080810]"
+                "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2 focus-visible:ring-offset-canvas"
               )}
             >
               Work with us
@@ -134,11 +125,11 @@ export function Hero() {
               href="/projects"
               className={cn(
                 "inline-flex items-center gap-2 px-6 py-3 rounded-xl",
-                "text-[15px] font-semibold text-white/65 hover:text-white",
-                "border border-white/10 hover:border-white/18 bg-white/4 hover:bg-white/7",
+                "text-[15px] font-semibold text-ink/65 hover:text-ink",
+                "border border-rule/10 hover:border-rule/18 bg-wash/4 hover:bg-wash/7",
                 "transition-all duration-200",
                 "shadow-[inset_0_1px_0_rgba(255,255,255,.05)]",
-                "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/30 focus-visible:ring-offset-2 focus-visible:ring-offset-[#080810]"
+                "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rule/30 focus-visible:ring-offset-2 focus-visible:ring-offset-canvas"
               )}
             >
               See our work
@@ -151,7 +142,7 @@ export function Hero() {
             className="mt-20 w-full max-w-[680px]"
           >
             {/* Divider */}
-            <div className="w-full h-px bg-gradient-to-r from-transparent via-white/8 to-transparent mb-8" />
+            <div className="section-line mb-8" />
 
             <dl className="grid grid-cols-2 sm:grid-cols-4 gap-y-6">
               {stats.map(({ value, label }, i) => (
@@ -162,12 +153,11 @@ export function Hero() {
                   transition={{ duration: 0.5, delay: 0.5 + i * 0.08, ease }}
                   className={cn(
                     "flex flex-col items-center gap-1",
-                    // vertical dividers between items (desktop)
-                    i > 0 && "sm:border-l sm:border-white/7"
+                    i > 0 && "sm:border-l sm:border-rule/7"
                   )}
                 >
-                  <dt className="text-2xl font-bold text-white tracking-tight">{value}</dt>
-                  <dd className="text-[11px] font-medium text-white/35 uppercase tracking-wider">{label}</dd>
+                  <dt className="text-2xl font-bold text-ink tracking-tight">{value}</dt>
+                  <dd className="text-[11px] font-medium text-ink/35 uppercase tracking-wider">{label}</dd>
                 </motion.div>
               ))}
             </dl>

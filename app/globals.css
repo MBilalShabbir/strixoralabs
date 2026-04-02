@@ -3,6 +3,33 @@
 @tailwind utilities;
 
 /* ─────────────────────────────────────────────────────────
+   SEMANTIC COLOR TOKENS
+   RGB triplets (no commas) — supports Tailwind / <alpha-value>
+───────────────────────────────────────────────────────── */
+:root {
+  /* Light mode defaults */
+  --bg-canvas:    248 248 252;  /* #f8f8fc — page bg, slight indigo cool tint */
+  --bg-panel:     255 255 255;  /* #ffffff — card bg */
+  --bg-panel-alt: 249 249 253;  /* #f9f9fd — alt card */
+  --bg-layer:     243 243 249;  /* #f3f3f9 — elevated / hover */
+  --bg-floor:     240 240 248;  /* #f0f0f8 — footer */
+  --fg-ink:       10  10  18;   /* #0a0a12 — primary text */
+  --fill-wash:    0   0   0;    /* transparent black fills */
+  --border-rule:  0   0   0;    /* transparent black borders */
+}
+
+.dark {
+  --bg-canvas:    8   8   16;   /* #080810 */
+  --bg-panel:     13  13  20;   /* #0d0d14 */
+  --bg-panel-alt: 15  15  26;   /* #0f0f1a */
+  --bg-layer:     17  17  25;   /* #111119 */
+  --bg-floor:     6   6   8;    /* #060608 */
+  --fg-ink:       248 248 255;  /* #f8f8ff */
+  --fill-wash:    255 255 255;
+  --border-rule:  255 255 255;
+}
+
+/* ─────────────────────────────────────────────────────────
    BASE
 ───────────────────────────────────────────────────────── */
 @layer base {
@@ -14,8 +41,8 @@
   }
 
   body {
-    background-color: #080810;
-    color: #f8f8ff;
+    background-color: rgb(var(--bg-canvas));
+    color: rgb(var(--fg-ink));
     font-feature-settings: "cv11", "ss01", "cv01", "cv03";
   }
 }
@@ -29,7 +56,7 @@
 }
 
 /* ─────────────────────────────────────────────────────────
-   SCROLLBAR — thin, dark, premium
+   SCROLLBAR — thin, premium
 ───────────────────────────────────────────────────────── */
 ::-webkit-scrollbar        { width: 5px; }
 ::-webkit-scrollbar-track  { background: transparent; }
@@ -45,34 +72,44 @@
    UTILITIES
 ───────────────────────────────────────────────────────── */
 @layer utilities {
-  /* ── Gradient text ── */
+  /* ── Gradient text — light/dark adaptive ── */
   .text-gradient {
+    background: linear-gradient(135deg, #4338ca 0%, #6366f1 40%, #7c3aed 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .dark .text-gradient {
     background: linear-gradient(135deg, #a5b4fc 0%, #818cf8 40%, #c4b5fd 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
 
-  /* ── Glass surfaces ── */
+  /* ── Glass surfaces — light/dark adaptive ── */
   .glass {
     backdrop-filter: blur(16px) saturate(160%);
     -webkit-backdrop-filter: blur(16px) saturate(160%);
-    background: rgba(8, 8, 16, 0.75);
+    background: rgba(248, 248, 252, 0.88);
+    border: 1px solid rgba(0, 0, 0, 0.07);
+  }
+  .dark .glass {
+    background: rgba(8, 8, 16, 0.78);
     border: 1px solid rgba(255, 255, 255, 0.055);
   }
 
   /* ── Cards ── */
   .card-surface {
-    background: #0d0d14;
-    border: 1px solid rgba(255, 255, 255, 0.055);
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.04);
+    background: rgb(var(--bg-panel));
+    border: 1px solid rgb(var(--border-rule) / 0.07);
+    box-shadow: 0 1px 2px rgb(var(--fill-wash) / 0.06), inset 0 1px 0 rgb(var(--fill-wash) / 0.03);
   }
 
   .card-surface-hover {
-    background: #111119;
-    border: 1px solid rgba(255, 255, 255, 0.09);
-    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.5), 0 1px 3px rgba(0, 0, 0, 0.3),
-                inset 0 1px 0 rgba(255, 255, 255, 0.06);
+    background: rgb(var(--bg-layer));
+    border: 1px solid rgb(var(--border-rule) / 0.1);
+    box-shadow: 0 4px 24px rgb(var(--fill-wash) / 0.1), 0 1px 3px rgb(var(--fill-wash) / 0.06),
+                inset 0 1px 0 rgb(var(--fill-wash) / 0.04);
   }
 
   /* ── Brand glow border ── */
@@ -80,6 +117,35 @@
     border: 1px solid rgba(99, 102, 241, 0.22);
     box-shadow: 0 0 0 1px rgba(99, 102, 241, 0.08),
                 0 0 20px rgba(99, 102, 241, 0.1);
+  }
+
+  /* ── Fine grid backgrounds — light/dark adaptive ── */
+  .grid-hero {
+    background-image:
+      linear-gradient(rgba(0,0,0,.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0,0,0,.04) 1px, transparent 1px);
+    background-size: 36px 36px;
+    mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black, transparent);
+    -webkit-mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black, transparent);
+  }
+  .dark .grid-hero {
+    background-image:
+      linear-gradient(rgba(255,255,255,.022) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,.022) 1px, transparent 1px);
+  }
+
+  .grid-page {
+    background-image:
+      linear-gradient(rgba(0,0,0,.035) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0,0,0,.035) 1px, transparent 1px);
+    background-size: 36px 36px;
+    mask-image: radial-gradient(ellipse 70% 80% at 50% 30%, black, transparent);
+    -webkit-mask-image: radial-gradient(ellipse 70% 80% at 50% 30%, black, transparent);
+  }
+  .dark .grid-page {
+    background-image:
+      linear-gradient(rgba(255,255,255,.02) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,.02) 1px, transparent 1px);
   }
 
   /* ── Noise overlay — adds texture without weight ── */
@@ -96,9 +162,9 @@
   .shimmer {
     background: linear-gradient(
       90deg,
-      rgba(255, 255, 255, 0) 0%,
-      rgba(255, 255, 255, 0.04) 50%,
-      rgba(255, 255, 255, 0) 100%
+      rgb(var(--fill-wash) / 0) 0%,
+      rgb(var(--fill-wash) / 0.04) 50%,
+      rgb(var(--fill-wash) / 0) 100%
     );
     background-size: 400px 100%;
     animation: shimmer 1.8s linear infinite;
@@ -131,13 +197,23 @@
 @layer components {
   /* ── Subtle section separator line ── */
   .section-line {
-    @apply w-full h-px bg-gradient-to-r from-transparent via-white/8 to-transparent;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(
+      to right,
+      transparent,
+      rgb(var(--border-rule) / 0.08),
+      transparent
+    );
   }
 
   /* ── Pill badge / label ── */
   .chip {
     @apply inline-flex items-center gap-1.5 rounded-full px-3.5 py-1
            text-xs font-semibold tracking-wide
-           border border-brand-500/20 bg-brand-500/10 text-brand-300;
+           border border-brand-500/20 bg-brand-500/10 text-brand-600;
+  }
+  .dark .chip {
+    @apply text-brand-300;
   }
 }

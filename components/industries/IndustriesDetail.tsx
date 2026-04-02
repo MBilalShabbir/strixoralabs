@@ -23,7 +23,7 @@ const industries = [
       "Medical device software under IEC 62304 with risk management documentation",
       "Patient-facing apps with accessibility, latency, and reliability standards",
     ],
-    color: "text-rose-400",
+    color: "text-rose-500",
     bg: "bg-rose-500/8",
     border: "border-rose-500/20",
     stat: { value: "40k+", label: "Active patients on platform" },
@@ -43,7 +43,7 @@ const industries = [
       "Real-time collaboration — live classrooms, async discussion, co-authoring",
       "Learner analytics dashboards with cohort comparisons and predictive dropout signals",
     ],
-    color: "text-blue-400",
+    color: "text-blue-500",
     bg: "bg-blue-500/8",
     border: "border-blue-500/20",
     stat: { value: "200+", label: "Institutions on one platform" },
@@ -63,7 +63,7 @@ const industries = [
       "CRM integrations — Salesforce, HubSpot, and custom systems",
       "Email, push, and in-app notification infrastructure built for deliverability",
     ],
-    color: "text-purple-400",
+    color: "text-purple-500",
     bg: "bg-purple-500/8",
     border: "border-purple-500/20",
     stat: { value: "10M+", label: "Events processed daily" },
@@ -83,7 +83,7 @@ const industries = [
       "Real-time financial data infrastructure with consistency guarantees",
       "PCI-DSS Level 1 and SOC 2 Type II compliant architectures",
     ],
-    color: "text-emerald-400",
+    color: "text-emerald-500",
     bg: "bg-emerald-500/8",
     border: "border-emerald-500/20",
     stat: { value: "£2M+", label: "Daily transaction volume" },
@@ -103,7 +103,7 @@ const industries = [
       "Supply chain emissions data pipelines with source traceability",
       "Smart grid and renewable energy monitoring systems",
     ],
-    color: "text-teal-400",
+    color: "text-teal-500",
     bg: "bg-teal-500/8",
     border: "border-teal-500/20",
     stat: { value: "1M+", label: "IoT readings processed daily" },
@@ -123,7 +123,7 @@ export function IndustriesDetail() {
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.6, delay: i * 0.04, ease: [0.22, 1, 0.36, 1] }}
             className={cn(
-              "rounded-3xl border bg-[#0f0f1a] p-8 lg:p-10",
+              "rounded-3xl border bg-panel-alt p-8 lg:p-10",
               ind.border
             )}
           >
@@ -133,27 +133,27 @@ export function IndustriesDetail() {
                 <div className={cn("w-11 h-11 rounded-2xl flex items-center justify-center mb-4", ind.bg)}>
                   <ind.icon className={cn("w-6 h-6", ind.color)} />
                 </div>
-                <h2 className="text-2xl font-bold text-white mb-1">{ind.name}</h2>
+                <h2 className="text-2xl font-bold text-ink mb-1">{ind.name}</h2>
                 <p className={cn("text-sm font-medium mb-4", ind.color)}>{ind.headline}</p>
-                <p className="text-gray-400 leading-relaxed text-sm mb-6">{ind.description}</p>
+                <p className="text-ink/45 leading-relaxed text-sm mb-6">{ind.description}</p>
 
                 {/* Stat */}
                 <div className={cn("inline-flex flex-col p-4 rounded-2xl border", ind.bg, ind.border)}>
                   <span className={cn("text-3xl font-black", ind.color)}>{ind.stat.value}</span>
-                  <span className="text-xs text-gray-500 font-medium">{ind.stat.label}</span>
+                  <span className="text-xs text-ink/40 font-medium">{ind.stat.label}</span>
                 </div>
               </div>
 
               {/* Right */}
               <div className="lg:w-1/2">
-                <h3 className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-4">
+                <h3 className="text-xs font-semibold uppercase tracking-wider text-ink/40 mb-4">
                   Our capabilities
                 </h3>
                 <ul className="space-y-3">
                   {ind.capabilities.map((cap) => (
                     <li key={cap} className="flex items-start gap-3">
                       <CheckCircle2 className={cn("w-4 h-4 mt-0.5 flex-shrink-0", ind.color)} />
-                      <span className="text-sm text-gray-300">{cap}</span>
+                      <span className="text-sm text-ink/65">{cap}</span>
                     </li>
                   ))}
                 </ul>

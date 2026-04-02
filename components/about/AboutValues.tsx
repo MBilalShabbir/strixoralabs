@@ -47,7 +47,7 @@ export function AboutValues() {
           className="text-center mb-14"
         >
           <SectionLabel className="mb-5">Our values</SectionLabel>
-          <h2 className="text-[clamp(1.8rem,3.5vw,2.8rem)] font-extrabold tracking-tighter text-white text-balance">
+          <h2 className="text-[clamp(1.8rem,3.5vw,2.8rem)] font-extrabold tracking-tighter text-ink text-balance">
             How we think. How we work.
           </h2>
         </motion.div>
@@ -62,14 +62,14 @@ export function AboutValues() {
               transition={{ duration: 0.45, delay: i * 0.07, ease }}
               className={cn(
                 "p-5 rounded-2xl card-surface",
-                "hover:border-brand-500/20 hover:bg-[#111119] transition-all duration-200"
+                "hover:border-brand-500/20 hover:bg-layer transition-all duration-200"
               )}
             >
               <div className="w-9 h-9 rounded-xl bg-brand-500/8 border border-brand-500/12 flex items-center justify-center mb-4">
-                <v.icon className="w-4 h-4 text-brand-400" strokeWidth={1.75} />
+                <v.icon className="w-4 h-4 text-brand-500" strokeWidth={1.75} />
               </div>
-              <h3 className="text-[13.5px] font-semibold text-white/90 mb-2">{v.title}</h3>
-              <p className="text-[12.5px] text-white/35 leading-relaxed">{v.description}</p>
+              <h3 className="text-[13.5px] font-semibold text-ink/90 mb-2">{v.title}</h3>
+              <p className="text-[12.5px] text-ink/35 leading-relaxed">{v.description}</p>
             </motion.div>
           ))}
         </div>

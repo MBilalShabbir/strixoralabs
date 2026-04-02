@@ -48,10 +48,10 @@ export function ServiceProcess() {
           className="text-center mb-16"
         >
           <SectionLabel className="mb-5">How we work</SectionLabel>
-          <h2 className="text-4xl font-bold tracking-tight mb-4">
+          <h2 className="text-4xl font-bold tracking-tight text-ink mb-4">
             How an engagement works
           </h2>
-          <p className="text-white/40 max-w-xl mx-auto">
+          <p className="text-ink/40 max-w-xl mx-auto">
             Five stages. No black boxes. You know exactly what's happening,
             why, and what's next at every point.
           </p>
@@ -71,11 +71,11 @@ export function ServiceProcess() {
                 transition={{ duration: 0.5, delay: i * 0.1 }}
                 className="relative flex flex-col items-center text-center"
               >
-                <div className="relative z-10 w-16 h-16 rounded-2xl bg-[#0f0f1a] border border-brand-500/20 flex items-center justify-center mb-4">
-                  <span className="text-2xl font-black text-brand-400">{step.number}</span>
+                <div className="relative z-10 w-16 h-16 rounded-2xl bg-panel-alt border border-brand-500/20 flex items-center justify-center mb-4">
+                  <span className="text-2xl font-black text-brand-500">{step.number}</span>
                 </div>
-                <h3 className="text-sm font-semibold text-white mb-2">{step.title}</h3>
-                <p className="text-xs text-gray-500 leading-relaxed">{step.description}</p>
+                <h3 className="text-sm font-semibold text-ink mb-2">{step.title}</h3>
+                <p className="text-xs text-ink/40 leading-relaxed">{step.description}</p>
               </motion.div>
             ))}
           </div>

@@ -7,6 +7,7 @@ import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { OwlLogo } from "@/components/brand/OwlLogo";
+import { ThemeToggle } from "@/components/ui/ThemeToggle";
 
 const navLinks = [
   { label: "About",      href: "/about" },
@@ -33,7 +34,7 @@ export function Navbar() {
       <header
         className={cn(
           "fixed inset-x-0 top-0 z-50 transition-all duration-500",
-          scrolled ? "glass shadow-[0_1px_0_rgba(255,255,255,0.05)]" : "bg-transparent"
+          scrolled ? "glass shadow-[0_1px_0_rgba(0,0,0,0.06)]" : "bg-transparent"
         )}
       >
         <nav className="mx-auto flex h-[60px] max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
@@ -45,8 +46,8 @@ export function Navbar() {
             aria-label="Strixora Labs"
           >
             <OwlLogo className="w-7 h-7 transition-all duration-300 group-hover:scale-105" />
-            <span className="text-[15px] font-semibold tracking-tight text-white/90 group-hover:text-white transition-colors">
-              Strixora<span className="text-brand-400 ml-0.5">Labs</span>
+            <span className="text-[15px] font-semibold tracking-tight text-ink/90 group-hover:text-ink transition-colors">
+              Strixora<span className="text-brand-500 ml-0.5">Labs</span>
             </span>
           </Link>
 
@@ -61,15 +62,15 @@ export function Navbar() {
                     className={cn(
                       "relative px-3.5 py-2 rounded-lg text-[13px] font-medium transition-all duration-200",
                       active
-                        ? "text-white"
-                        : "text-white/45 hover:text-white/80"
+                        ? "text-ink"
+                        : "text-ink/45 hover:text-ink/80"
                     )}
                   >
                     {/* Active background pill */}
                     {active && (
                       <motion.span
                         layoutId="nav-pill"
-                        className="absolute inset-0 rounded-lg bg-white/8 shadow-inset-t"
+                        className="absolute inset-0 rounded-lg bg-wash/8 shadow-inset-t"
                         transition={{ type: "spring", bounce: 0.2, duration: 0.35 }}
                       />
                     )}
@@ -82,6 +83,7 @@ export function Navbar() {
 
           {/* ── Right actions ── */}
           <div className="hidden md:flex items-center gap-2.5">
+            <ThemeToggle />
             <Link
               href="/contact"
               className={cn(
@@ -99,12 +101,13 @@ export function Navbar() {
 
           {/* ── Mobile ── */}
           <div className="flex md:hidden items-center gap-2">
+            <ThemeToggle className="w-8 h-8 rounded-lg" />
             <button
               onClick={() => setMobileOpen((v) => !v)}
               className={cn(
                 "w-8 h-8 flex items-center justify-center rounded-lg",
-                "text-white/50 hover:text-white",
-                "border border-white/8 hover:border-white/15 bg-white/4 hover:bg-white/8",
+                "text-ink/50 hover:text-ink",
+                "border border-rule/8 hover:border-rule/15 bg-wash/4 hover:bg-wash/8",
                 "transition-all duration-200"
               )}
               aria-label="Toggle navigation"
@@ -127,7 +130,7 @@ export function Navbar() {
             transition={{ duration: 0.18, ease: "easeOut" }}
             className="fixed inset-x-0 top-[60px] z-40 md:hidden"
           >
-            <div className="glass border-b border-white/5 px-4 py-3 space-y-0.5">
+            <div className="glass border-b border-rule/5 px-4 py-3 space-y-0.5">
               {navLinks.map(({ label, href }) => (
                 <Link
                   key={href}
@@ -135,8 +138,8 @@ export function Navbar() {
                   className={cn(
                     "block px-4 py-2.5 rounded-xl text-sm font-medium transition-colors",
                     pathname === href
-                      ? "text-white bg-white/8"
-                      : "text-white/50 hover:text-white hover:bg-white/5"
+                      ? "text-ink bg-wash/8"
+                      : "text-ink/50 hover:text-ink hover:bg-wash/5"
                   )}
                 >
                   {label}

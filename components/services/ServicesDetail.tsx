@@ -23,7 +23,7 @@ const services = [
       "CI/CD pipelines, feature flags, and deployment strategies that make Friday releases boring",
       "Observability, alerting, and runbooks so your on-call isn't a mystery tour",
     ],
-    color: "text-indigo-400",
+    color: "text-indigo-500",
     bg: "bg-indigo-500/10",
     border: "border-indigo-500/20",
   },
@@ -42,7 +42,7 @@ const services = [
       "Computer vision systems with real inference performance and edge-deployment options",
       "AI monitoring, drift detection, and A/B evaluation frameworks that give confidence, not guesswork",
     ],
-    color: "text-violet-400",
+    color: "text-violet-500",
     bg: "bg-violet-500/10",
     border: "border-violet-500/20",
   },
@@ -61,7 +61,7 @@ const services = [
       "Structured knowledge transfer so nothing walks out the door when we do",
       "Architecture and code quality that holds up after the engagement ends",
     ],
-    color: "text-sky-400",
+    color: "text-sky-500",
     bg: "bg-sky-500/10",
     border: "border-sky-500/20",
   },
@@ -80,7 +80,7 @@ const services = [
       "Security posture assessment against OWASP, CIS benchmarks, and compliance requirements",
       "Digital transformation roadmaps with honest sequencing, not aspirational timelines",
     ],
-    color: "text-amber-400",
+    color: "text-amber-500",
     bg: "bg-amber-500/10",
     border: "border-amber-500/20",
   },
@@ -99,7 +99,7 @@ const services = [
       "Report and alert automation that delivers signal, not noise",
       "Workflow monitoring with self-healing triggers and escalation paths",
     ],
-    color: "text-emerald-400",
+    color: "text-emerald-500",
     bg: "bg-emerald-500/10",
     border: "border-emerald-500/20",
   },
@@ -118,7 +118,7 @@ export function ServicesDetail() {
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.6, delay: i * 0.05, ease: [0.22, 1, 0.36, 1] }}
             className={cn(
-              "rounded-3xl border bg-[#0f0f1a] p-8 lg:p-10",
+              "rounded-3xl border bg-panel-alt p-8 lg:p-10",
               svc.border
             )}
           >
@@ -128,9 +128,9 @@ export function ServicesDetail() {
                 <div className={cn("w-11 h-11 rounded-2xl flex items-center justify-center mb-4", svc.bg)}>
                   <svc.icon className={cn("w-6 h-6", svc.color)} />
                 </div>
-                <h2 className="text-2xl font-bold text-white mb-1">{svc.title}</h2>
+                <h2 className="text-2xl font-bold text-ink mb-1">{svc.title}</h2>
                 <p className={cn("text-sm font-medium mb-4", svc.color)}>{svc.headline}</p>
-                <p className="text-gray-400 leading-relaxed text-sm">{svc.description}</p>
+                <p className="text-ink/45 leading-relaxed text-sm">{svc.description}</p>
               </div>
 
               {/* Right */}
@@ -139,7 +139,7 @@ export function ServicesDetail() {
                   {svc.points.map((point) => (
                     <li key={point} className="flex items-start gap-3">
                       <CheckCircle2 className={cn("w-4 h-4 mt-0.5 flex-shrink-0", svc.color)} />
-                      <span className="text-sm text-gray-300">{point}</span>
+                      <span className="text-sm text-ink/65">{point}</span>
                     </li>
                   ))}
                 </ul>

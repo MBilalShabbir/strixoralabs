@@ -60,11 +60,11 @@ export function WhyUs() {
             className="lg:sticky lg:top-28"
           >
             <SectionLabel className="mb-6">Why Strixora</SectionLabel>
-            <h2 className="text-[clamp(2rem,4vw,3.25rem)] font-extrabold tracking-tighter text-white leading-tight text-balance mb-5">
+            <h2 className="text-[clamp(2rem,4vw,3.25rem)] font-extrabold tracking-tighter text-ink leading-tight text-balance mb-5">
               We don't take every project.{" "}
               <span className="text-gradient">We take the right ones.</span>
             </h2>
-            <p className="text-[15px] text-white/42 leading-relaxed mb-10 max-w-sm">
+            <p className="text-[15px] text-ink/42 leading-relaxed mb-10 max-w-sm">
               Selective by design. We work with teams building something hard —
               and stay invested long after the last line of code ships.
             </p>
@@ -74,17 +74,17 @@ export function WhyUs() {
               {/* Top highlight */}
               <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-brand-500/35 to-transparent" />
 
-              <p className="text-[13.5px] text-white/55 italic leading-relaxed mb-4">
+              <p className="text-[13.5px] text-ink/55 italic leading-relaxed mb-4">
                 "Strixora flagged architectural issues in our data pipeline that three previous agencies missed.
                 They didn't just build what we asked — they built what we needed."
               </p>
               <footer className="flex items-center gap-3">
-                <div className="w-7 h-7 rounded-full bg-brand-600/25 border border-brand-500/30 flex items-center justify-center text-[10px] font-bold text-brand-300 shrink-0">
+                <div className="w-7 h-7 rounded-full bg-brand-600/25 border border-brand-500/30 flex items-center justify-center text-[10px] font-bold text-brand-500 shrink-0">
                   SR
                 </div>
                 <div>
-                  <div className="text-[12px] font-semibold text-white/75">Sarah R.</div>
-                  <div className="text-[11px] text-white/30">VP Engineering, FinLedger</div>
+                  <div className="text-[12px] font-semibold text-ink/75">Sarah R.</div>
+                  <div className="text-[11px] text-ink/30">VP Engineering, FinLedger</div>
                 </div>
               </footer>
             </blockquote>
@@ -102,26 +102,26 @@ export function WhyUs() {
                 className={cn(
                   "group flex gap-4 p-5 rounded-2xl",
                   "card-surface transition-all duration-250",
-                  "hover:border-white/10 hover:bg-[#111119]",
-                  "hover:shadow-[0_4px_20px_rgba(0,0,0,.4)]"
+                  "hover:border-rule/10 hover:bg-layer",
+                  "hover:shadow-[0_4px_20px_rgba(0,0,0,.08)]"
                 )}
               >
                 <div className="shrink-0 w-9 h-9 rounded-xl bg-brand-500/8 border border-brand-500/12 flex items-center justify-center">
-                  <reason.icon className="w-4 h-4 text-brand-400" strokeWidth={1.75} />
+                  <reason.icon className="w-4 h-4 text-brand-500" strokeWidth={1.75} />
                 </div>
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center justify-between gap-4 mb-1">
-                    <h3 className="text-[13.5px] font-semibold text-white/90">{reason.title}</h3>
+                    <h3 className="text-[13.5px] font-semibold text-ink/90">{reason.title}</h3>
                     <div className="shrink-0 text-right">
-                      <div className="text-[18px] font-bold text-brand-400 leading-none tabular-nums">
+                      <div className="text-[18px] font-bold text-brand-500 leading-none tabular-nums">
                         {reason.metric}
                       </div>
-                      <div className="text-[10px] text-white/25 font-medium uppercase tracking-wide">
+                      <div className="text-[10px] text-ink/25 font-medium uppercase tracking-wide">
                         {reason.metricLabel}
                       </div>
                     </div>
                   </div>
-                  <p className="text-[13px] text-white/38 leading-relaxed">
+                  <p className="text-[13px] text-ink/38 leading-relaxed">
                     {reason.description}
                   </p>
                 </div>

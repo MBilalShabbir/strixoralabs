@@ -19,9 +19,9 @@ const projects = [
     metric: "£2M+",
     metricLabel: "Processed daily",
     href: "/projects#finledger",
-    accentFrom: "from-emerald-500/10",
+    accentFrom: "from-emerald-500/8",
     accentBorder: "hover:border-emerald-500/25",
-    dot: "bg-emerald-400",
+    dot: "bg-emerald-500",
   },
   {
     title: "HealthFlow",
@@ -33,9 +33,9 @@ const projects = [
     metric: "99.97%",
     metricLabel: "Uptime post-launch",
     href: "/projects#healthflow",
-    accentFrom: "from-rose-500/10",
+    accentFrom: "from-rose-500/8",
     accentBorder: "hover:border-rose-500/25",
-    dot: "bg-rose-400",
+    dot: "bg-rose-500",
   },
   {
     title: "LearnPath",
@@ -47,9 +47,9 @@ const projects = [
     metric: "34%",
     metricLabel: "Completion uplift",
     href: "/projects#learnpath",
-    accentFrom: "from-sky-500/10",
+    accentFrom: "from-sky-500/8",
     accentBorder: "hover:border-sky-500/25",
-    dot: "bg-sky-400",
+    dot: "bg-sky-500",
   },
 ];
 
@@ -68,14 +68,14 @@ export function FeaturedProjects() {
         >
           <div>
             <SectionLabel className="mb-5">Case studies</SectionLabel>
-            <h2 className="text-[clamp(2rem,4vw,3.25rem)] font-extrabold tracking-tighter text-white leading-tight text-balance">
+            <h2 className="text-[clamp(2rem,4vw,3.25rem)] font-extrabold tracking-tighter text-ink leading-tight text-balance">
               Real products.{" "}
               <span className="text-gradient">Real numbers.</span>
             </h2>
           </div>
           <Link
             href="/projects"
-            className="shrink-0 inline-flex items-center gap-1.5 text-[13px] font-semibold text-white/40 hover:text-white/80 transition-colors duration-200"
+            className="shrink-0 inline-flex items-center gap-1.5 text-[13px] font-semibold text-ink/40 hover:text-ink/80 transition-colors duration-200"
           >
             All case studies
             <ArrowUpRight className="w-3.5 h-3.5" />
@@ -97,9 +97,9 @@ export function FeaturedProjects() {
                 className={cn(
                   "group relative flex flex-col sm:flex-row items-start gap-6 p-6 sm:p-8 rounded-2xl overflow-hidden",
                   "card-surface transition-all duration-300",
-                  "border border-white/[0.055]",
+                  "border border-rule/[0.055]",
                   p.accentBorder,
-                  "hover:shadow-[0_8px_32px_rgba(0,0,0,.5)]",
+                  "hover:shadow-[0_8px_32px_rgba(0,0,0,.1)]",
                   "hover:-translate-y-0.5"
                 )}
               >
@@ -112,22 +112,22 @@ export function FeaturedProjects() {
                 <div className="relative flex-1 pl-1">
                   <div className="flex items-center gap-2 mb-2.5">
                     <span className={cn("w-1.5 h-1.5 rounded-full", p.dot)} />
-                    <span className="text-[11px] font-semibold uppercase tracking-[0.09em] text-white/30">
+                    <span className="text-[11px] font-semibold uppercase tracking-[0.09em] text-ink/30">
                       {p.category}
                     </span>
                   </div>
-                  <h3 className="text-lg font-bold text-white/90 group-hover:text-white transition-colors mb-0.5">
+                  <h3 className="text-lg font-bold text-ink/90 group-hover:text-ink transition-colors mb-0.5">
                     {p.title}
-                    <span className="text-white/30 font-normal ml-2 text-[15px]">— {p.subtitle}</span>
+                    <span className="text-ink/30 font-normal ml-2 text-[15px]">— {p.subtitle}</span>
                   </h3>
-                  <p className="text-[13px] text-white/38 leading-relaxed max-w-2xl mt-2 mb-4">
+                  <p className="text-[13px] text-ink/38 leading-relaxed max-w-2xl mt-2 mb-4">
                     {p.description}
                   </p>
                   <div className="flex flex-wrap gap-1.5">
                     {p.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="px-2.5 py-0.5 rounded-md bg-white/4 border border-white/7 text-[11px] font-medium text-white/32"
+                        className="px-2.5 py-0.5 rounded-md bg-wash/4 border border-rule/7 text-[11px] font-medium text-ink/32"
                       >
                         {tag}
                       </span>
@@ -138,10 +138,10 @@ export function FeaturedProjects() {
                 {/* Right metric */}
                 <div className="relative shrink-0 flex flex-col items-end justify-between self-stretch">
                   <div className="text-right">
-                    <div className="text-3xl font-bold text-white tabular-nums">{p.metric}</div>
-                    <div className="text-[11px] text-white/28 font-medium">{p.metricLabel}</div>
+                    <div className="text-3xl font-bold text-ink tabular-nums">{p.metric}</div>
+                    <div className="text-[11px] text-ink/28 font-medium">{p.metricLabel}</div>
                   </div>
-                  <ArrowUpRight className="w-5 h-5 text-white/20 group-hover:text-white/60 transition-all duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                  <ArrowUpRight className="w-5 h-5 text-ink/20 group-hover:text-ink/60 transition-all duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </div>
               </Link>
             </motion.div>

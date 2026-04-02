@@ -54,6 +54,15 @@ const config: Config = {
           "3":     "#16161f",  // highest elevation
           border:  "#1c1c28",  // structural borders
         },
+        // ── Semantic tokens — light/dark adaptive via CSS vars ──
+        canvas:       "rgb(var(--bg-canvas) / <alpha-value>)",
+        panel:        "rgb(var(--bg-panel) / <alpha-value>)",
+        "panel-alt":  "rgb(var(--bg-panel-alt) / <alpha-value>)",
+        layer:        "rgb(var(--bg-layer) / <alpha-value>)",
+        floor:        "rgb(var(--bg-floor) / <alpha-value>)",
+        ink:          "rgb(var(--fg-ink) / <alpha-value>)",
+        wash:         "rgb(var(--fill-wash) / <alpha-value>)",
+        rule:         "rgb(var(--border-rule) / <alpha-value>)",
       },
       backgroundImage: {
         // Subtle grid — reduced opacity for premium feel

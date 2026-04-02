@@ -16,7 +16,7 @@ export function NewsletterForm() {
 
   if (submitted) {
     return (
-      <p className="text-xs text-brand-400 py-2">
+      <p className="text-xs text-brand-500 py-2">
         You're subscribed. Thanks!
       </p>
     );
@@ -30,7 +30,7 @@ export function NewsletterForm() {
         onChange={(e) => setEmail(e.target.value)}
         placeholder="you@company.com"
         required
-        className="flex-1 rounded-lg bg-white/5 border border-white/8 px-3 py-2 text-sm text-white placeholder:text-gray-600 focus:outline-none focus:ring-1 focus:ring-brand-500 focus:border-brand-500/40 transition-all"
+        className="flex-1 rounded-lg bg-wash/5 border border-rule/8 px-3 py-2 text-sm text-ink placeholder:text-ink/30 focus:outline-none focus:ring-1 focus:ring-brand-500 focus:border-brand-500/40 transition-all"
       />
       <button
         type="submit"

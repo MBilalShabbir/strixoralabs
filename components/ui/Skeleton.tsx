@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 export function Skeleton({ className, style }: { className?: string; style?: React.CSSProperties }) {
   return (
     <div
-      className={cn("animate-pulse rounded-xl bg-white/[0.045]", className)}
+      className={cn("animate-pulse rounded-xl bg-wash/[0.045]", className)}
       style={style}
     />
   );
@@ -17,7 +17,7 @@ export function Skeleton({ className, style }: { className?: string; style?: Rea
 export function PageHeroSkeleton() {
   return (
     <div className="relative py-28 flex flex-col items-center gap-5 px-4 overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_40%_at_50%_0%,rgba(99,102,241,0.08),transparent)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_40%_at_50%_0%,rgba(99,102,241,0.06),transparent)]" />
       <Skeleton className="h-6 w-28 rounded-full" />
       <div className="flex flex-col items-center gap-3 w-full max-w-2xl">
         <Skeleton className="h-12 w-full max-w-xl" />
@@ -41,7 +41,7 @@ export function ProjectGridSkeleton() {
           {Array.from({ length: 6 }).map((_, i) => (
             <div
               key={i}
-              className="rounded-3xl border border-white/[0.06] bg-[#0f0f1a] p-7 space-y-5"
+              className="rounded-3xl border border-rule/[0.06] bg-panel-alt p-7 space-y-5"
             >
               <div className="flex items-start gap-4">
                 <div className="flex-1 space-y-2">
@@ -89,7 +89,7 @@ export function DetailCardsSkeleton({ count = 5 }: { count?: number }) {
         {Array.from({ length: count }).map((_, i) => (
           <div
             key={i}
-            className="rounded-3xl border border-white/[0.06] bg-[#0f0f1a] p-8 lg:p-10"
+            className="rounded-3xl border border-rule/[0.06] bg-panel-alt p-8 lg:p-10"
           >
             <div className="flex flex-col lg:flex-row gap-8">
               <div className="lg:w-1/2 space-y-4">
@@ -129,7 +129,7 @@ export function ContactSkeleton() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-5 gap-12">
           <div className="lg:col-span-3">
-            <div className="rounded-3xl border border-white/[0.06] bg-[#0d0d14] p-8 space-y-6">
+            <div className="rounded-3xl border border-rule/[0.06] bg-panel p-8 space-y-6">
               <div className="space-y-2">
                 <Skeleton className="h-7 w-56" />
                 <Skeleton className="h-4 w-48" />
@@ -148,7 +148,7 @@ export function ContactSkeleton() {
             </div>
           </div>
           <div className="lg:col-span-2 space-y-6">
-            <div className="rounded-3xl border border-white/[0.06] bg-[#0f0f1a] p-7 space-y-4">
+            <div className="rounded-3xl border border-rule/[0.06] bg-panel-alt p-7 space-y-4">
               <Skeleton className="h-5 w-36" />
               {Array.from({ length: 3 }).map((_, i) => (
                 <div key={i} className="flex gap-3">
@@ -160,10 +160,10 @@ export function ContactSkeleton() {
                 </div>
               ))}
             </div>
-            <div className="rounded-3xl border border-white/[0.06] bg-[#0f0f1a] p-7 space-y-4">
+            <div className="rounded-3xl border border-rule/[0.06] bg-panel-alt p-7 space-y-4">
               <Skeleton className="h-5 w-40" />
               {Array.from({ length: 4 }).map((_, i) => (
-                <div key={i} className="border-b border-white/5 pb-4 last:border-0 space-y-2">
+                <div key={i} className="border-b border-rule/5 pb-4 last:border-0 space-y-2">
                   <Skeleton className="h-4 w-64" />
                   <Skeleton className="h-3 w-full" />
                   <Skeleton className="h-3 w-5/6" />
@@ -189,7 +189,7 @@ export function SectionRowsSkeleton({ rows = 3 }: { rows?: number }) {
         </div>
         <div className="space-y-6">
           {Array.from({ length: rows }).map((_, i) => (
-            <div key={i} className="flex gap-6 p-6 rounded-2xl border border-white/[0.06] bg-[#0d0d14]">
+            <div key={i} className="flex gap-6 p-6 rounded-2xl border border-rule/[0.06] bg-panel">
               <Skeleton className="w-10 h-10 rounded-xl flex-shrink-0" />
               <div className="flex-1 space-y-2">
                 <Skeleton className="h-5 w-40" />
