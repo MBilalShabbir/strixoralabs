@@ -7,9 +7,18 @@ import { FeaturedProjects } from "@/components/home/FeaturedProjects";
 import { CTA }              from "@/components/home/CTA";
 
 export const metadata: Metadata = {
-  title: "Strixora Labs — Technology & Innovation",
+  title: "Strixora Labs — We build software your competitors can't replicate.",
   description:
-    "Full-stack software development, AI solutions, team augmentation, and consultancy for companies in Healthtech, Fintech, Edtech, Martech, and Greentech.",
+    "Senior-only software engineers specialising in Fintech, Healthtech, Edtech, Martech, and Greentech. HIPAA, PCI-DSS, and CSRD-compliant systems by design. Currently accepting Q3 engagements.",
+  alternates: {
+    canonical: "https://strixoralabs.com",
+  },
+  openGraph: {
+    url: "https://strixoralabs.com",
+    title: "Strixora Labs — We build software your competitors can't replicate.",
+    description:
+      "Senior-only engineers. Regulated industries. 50+ products shipped. £2M+ daily fintech volume. 98% client retention.",
+  },
 };
 
 export default function HomePage() {

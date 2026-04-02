@@ -1,14 +1,13 @@
+import React from "react";
 import { cn } from "@/lib/utils";
 
 // ─── Base ────────────────────────────────────────────────────────────────────
 
-export function Skeleton({ className }: { className?: string }) {
+export function Skeleton({ className, style }: { className?: string; style?: React.CSSProperties }) {
   return (
     <div
-      className={cn(
-        "animate-pulse rounded-xl bg-white/[0.045]",
-        className
-      )}
+      className={cn("animate-pulse rounded-xl bg-white/[0.045]", className)}
+      style={style}
     />
   );
 }

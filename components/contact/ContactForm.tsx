@@ -14,6 +14,7 @@ const schema = z.object({
   service: z.string().min(1, "Please select a service"),
   budget:  z.string().optional(),
   message: z.string().min(20, "Please provide at least 20 characters"),
+  _honey:  z.string().optional(), // honeypot — must stay empty
 });
 
 type FormData = z.infer<typeof schema>;
@@ -107,6 +108,16 @@ export function ContactForm() {
       className="rounded-3xl border border-white/[0.06] bg-[#0d0d14] p-8 space-y-6"
       noValidate
     >
+      {/* Honeypot — hidden from humans, filled by bots */}
+      <div aria-hidden="true" style={{ display: "none" }}>
+        <input
+          {...register("_honey")}
+          type="text"
+          tabIndex={-1}
+          autoComplete="off"
+        />
+      </div>
+
       <div>
         <h2 className="text-lg font-bold text-white mb-1">Tell us about your project</h2>
         <p className="text-[13px] text-white/32">We'll get back to you within 24 hours.</p>

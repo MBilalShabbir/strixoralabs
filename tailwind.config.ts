@@ -18,25 +18,41 @@ const config: Config = {
         tight:   "-0.02em",
       },
       colors: {
+        // ── Primary — Indigo. Authority, intelligence, precision.
         brand: {
           50:  "#eef2ff",
           100: "#e0e7ff",
           200: "#c7d2fe",
           300: "#a5b4fc",
           400: "#818cf8",
-          500: "#6366f1",
-          600: "#4f46e5",
-          700: "#4338ca",
-          800: "#3730a3",
+          500: "#6366f1",   // primary interactive
+          600: "#4f46e5",   // hover / CTA
+          700: "#4338ca",   // active / pressed
+          800: "#3730a3",   // deep accent
           900: "#312e81",
-          950: "#1e1b4b",
+          950: "#1e1b4b",   // near-black tint
         },
+        // ── Secondary — Violet. AI, ML, intelligence contexts.
+        violet: {
+          50:  "#f5f3ff",
+          100: "#ede9fe",
+          200: "#ddd6fe",
+          300: "#c4b5fd",
+          400: "#a78bfa",
+          500: "#8b5cf6",   // AI/ML accent
+          600: "#7c3aed",
+          700: "#6d28d9",
+          800: "#5b21b6",
+          900: "#4c1d95",
+          950: "#2e1065",
+        },
+        // ── Dark surfaces — fine-grained depth scale.
         surface: {
-          DEFAULT: "#080810",
-          "1":     "#0d0d14",
-          "2":     "#111119",
-          "3":     "#16161f",
-          border:  "#1c1c28",
+          DEFAULT: "#080810",  // true base
+          "1":     "#0d0d14",  // card background
+          "2":     "#111119",  // elevated card
+          "3":     "#16161f",  // highest elevation
+          border:  "#1c1c28",  // structural borders
         },
       },
       backgroundImage: {

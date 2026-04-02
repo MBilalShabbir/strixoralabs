@@ -1,0 +1,23 @@
+<svg viewBox="0 0 240 32" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Strixora Labs">
+  <!--
+    STRIXORA LABS — Wordmark
+    Primary: white on dark. Swap fill for light backgrounds.
+    Font: Inter 700/800. Convert to outlines for print.
+  -->
+  <text
+    x="0" y="24"
+    font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+    font-weight="700"
+    font-size="22"
+    letter-spacing="-0.04em"
+    fill="white"
+  >STRIXORA</text>
+  <text
+    x="158" y="24"
+    font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+    font-weight="400"
+    font-size="22"
+    letter-spacing="-0.02em"
+    fill="rgba(255,255,255,0.38)"
+  >LABS</text>
+</svg>

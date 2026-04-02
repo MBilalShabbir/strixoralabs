@@ -6,7 +6,16 @@ import { ContactInfo } from "@/components/contact/ContactInfo";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Start a conversation with Strixora Labs. Tell us about your project and we'll get back to you within 24 hours.",
+    "Start a conversation with Strixora Labs. Describe your project and we'll respond within 24 hours with a direct, honest view on fit. If we're not right for you, we'll say so.",
+  alternates: {
+    canonical: "https://strixoralabs.com/contact",
+  },
+  openGraph: {
+    url: "https://strixoralabs.com/contact",
+    title: "Contact Strixora Labs — Tell us what you're building.",
+    description:
+      "We respond within 24 hours with a direct, honest view on fit — not a sales pitch. NDA available on request. Fixed-price engagements available.",
+  },
 };
 
 export default function ContactPage() {

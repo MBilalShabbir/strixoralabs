@@ -1,0 +1,15 @@
+{
+  "name": "Strixora Labs",
+  "short_name": "Strixora",
+  "description": "We build software your competitors can't replicate.",
+  "icons": [
+    { "src": "/favicon.svg", "type": "image/svg+xml", "sizes": "any" },
+    { "src": "/icon", "type": "image/png", "sizes": "32x32" },
+    { "src": "/apple-icon", "type": "image/png", "sizes": "180x180", "purpose": "apple touch icon" }
+  ],
+  "theme_color": "#6366f1",
+  "background_color": "#080810",
+  "display": "standalone",
+  "start_url": "/",
+  "scope": "/"
+}

@@ -17,43 +17,59 @@ const jetbrainsMono = JetBrains_Mono({
   display: "swap",
 });
 
+const BASE_URL = "https://strixoralabs.com";
+const OG_IMAGE = `${BASE_URL}/opengraph-image`;
+
 export const metadata: Metadata = {
+  metadataBase: new URL(BASE_URL),
   title: {
-    default: "Strixora Labs — Technology & Innovation",
+    default: "Strixora Labs — We build software your competitors can't replicate.",
     template: "%s | Strixora Labs",
   },
   description:
-    "Strixora Labs delivers full-stack software development, AI solutions, team augmentation, and consultancy across Healthtech, Edtech, Fintech, Martech, and Greentech.",
+    "Senior-only software engineers. We build production systems for Fintech, Healthtech, Edtech, Martech, and Greentech. Compliance by design. Outcomes guaranteed.",
   keywords: [
-    "software development",
+    "software development agency",
+    "senior software engineers",
+    "fintech development",
+    "healthtech software",
+    "edtech platform development",
     "AI solutions",
     "team augmentation",
-    "consultancy",
-    "automation",
-    "healthtech",
-    "edtech",
-    "fintech",
-    "martech",
-    "greentech",
-    "technology company",
+    "technology consultancy",
+    "HIPAA compliant software",
+    "PCI-DSS development",
+    "London software company",
+    "full-stack development",
   ],
-  authors: [{ name: "Strixora Labs" }],
+  authors: [{ name: "Strixora Labs", url: BASE_URL }],
   creator: "Strixora Labs",
+  publisher: "Strixora Labs",
   openGraph: {
     type: "website",
-    locale: "en_US",
-    url: "https://strixoralabs.com",
-    title: "Strixora Labs — Technology & Innovation",
-    description:
-      "Building intelligent systems that drive growth, efficiency, and real-world impact.",
+    locale: "en_GB",
+    url: BASE_URL,
     siteName: "Strixora Labs",
+    title: "Strixora Labs — We build software your competitors can't replicate.",
+    description:
+      "Senior-only engineers. Regulated industries. We build production systems that hold up to auditors, investors, and real users.",
+    images: [
+      {
+        url: OG_IMAGE,
+        width: 1200,
+        height: 630,
+        alt: "Strixora Labs — Senior-only software engineering",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Strixora Labs — Technology & Innovation",
-    description:
-      "Building intelligent systems that drive growth, efficiency, and real-world impact.",
+    site: "@strixoralabs",
     creator: "@strixoralabs",
+    title: "Strixora Labs — We build software your competitors can't replicate.",
+    description:
+      "Senior-only engineers. Regulated industries. Production-grade delivery.",
+    images: [OG_IMAGE],
   },
   robots: {
     index: true,
@@ -66,13 +82,19 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
+  manifest: "/site.webmanifest",
+  icons: {
+    icon: [{ url: "/favicon.svg", type: "image/svg+xml" }],
+  },
 };
 
 export const viewport: Viewport = {
   themeColor: [
-    { media: "(prefers-color-scheme: dark)", color: "#0a0a0f" },
+    { media: "(prefers-color-scheme: dark)", color: "#080810" },
     { media: "(prefers-color-scheme: light)", color: "#ffffff" },
   ],
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({
@@ -86,10 +108,6 @@ export default function RootLayout({
       suppressHydrationWarning
       className={`${inter.variable} ${jetbrainsMono.variable}`}
     >
-      <head>
-        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-      </head>
       <body className="font-sans antialiased min-h-screen flex flex-col">
         <ThemeProvider>
           <Navbar />

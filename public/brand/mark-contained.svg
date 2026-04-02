@@ -1,0 +1,67 @@
+<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Strixora Labs mark">
+  <!--
+    STRIXORA LABS — Contained Mark
+    Indigo square container. Use anywhere: nav, favicon, app icons.
+    Minimum display size: 16×16px
+  -->
+
+  <!-- Container -->
+  <rect width="48" height="48" rx="11" fill="url(#containerGrad)" />
+  <!-- Subtle inner top highlight -->
+  <rect width="48" height="48" rx="11" fill="url(#containerSheen)" />
+
+  <!-- Body -->
+  <path
+    d="M24 10 L33 16 L33 30 Q33 37 24 37 Q15 37 15 30 L15 16 Z"
+    fill="url(#bodyGrad)"
+  />
+
+  <!-- Left ear tuft -->
+  <path d="M15 17 L13.5 10 L19 15 Z" fill="url(#tuftGrad)" />
+  <!-- Right ear tuft -->
+  <path d="M33 17 L34.5 10 L29 15 Z" fill="url(#tuftGrad)" />
+
+  <!-- Left eye socket -->
+  <circle cx="19.5" cy="22" r="4.8" fill="#0A0A1A" />
+  <!-- Left iris -->
+  <circle cx="19.5" cy="22" r="2.8" fill="white" opacity="0.97" />
+  <!-- Left pupil -->
+  <circle cx="20.3" cy="21.3" r="1.1" fill="#0A0A1A" />
+  <!-- Left catchlight -->
+  <circle cx="18.8" cy="20.7" r="0.45" fill="rgba(199,210,254,0.8)" />
+
+  <!-- Right eye socket -->
+  <circle cx="28.5" cy="22" r="4.8" fill="#0A0A1A" />
+  <!-- Right iris -->
+  <circle cx="28.5" cy="22" r="2.8" fill="white" opacity="0.97" />
+  <!-- Right pupil -->
+  <circle cx="29.3" cy="21.3" r="1.1" fill="#0A0A1A" />
+  <!-- Right catchlight -->
+  <circle cx="27.8" cy="20.7" r="0.45" fill="rgba(199,210,254,0.8)" />
+
+  <!-- Beak -->
+  <path d="M24 27 L21.5 30.5 L26.5 30.5 Z" fill="url(#beakGrad)" />
+
+  <defs>
+    <linearGradient id="containerGrad" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#6366F1" />
+      <stop offset="100%" stop-color="#4338CA" />
+    </linearGradient>
+    <linearGradient id="containerSheen" x1="0" y1="0" x2="0" y2="48" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.10)" />
+      <stop offset="40%" stop-color="rgba(255,255,255,0)" />
+    </linearGradient>
+    <linearGradient id="bodyGrad" x1="15" y1="10" x2="33" y2="37" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="rgba(55,48,163,0.9)" />
+      <stop offset="100%" stop-color="rgba(30,27,75,0.95)" />
+    </linearGradient>
+    <linearGradient id="tuftGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#E0E7FF" />
+      <stop offset="100%" stop-color="#A5B4FC" />
+    </linearGradient>
+    <linearGradient id="beakGrad" x1="21.5" y1="27" x2="26.5" y2="30.5" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FDE68A" />
+      <stop offset="100%" stop-color="#F59E0B" />
+    </linearGradient>
+  </defs>
+</svg>

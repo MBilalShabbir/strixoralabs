@@ -1,0 +1,55 @@
+<svg viewBox="0 0 220 40" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Strixora Labs">
+  <!--
+    STRIXORA LABS — Horizontal Lockup
+    Mark + Wordmark. Use in nav, headers, email footers.
+    Minimum display: 160px wide.
+  -->
+
+  <!-- Mark (40×40) -->
+  <path d="M20 8 L29 14 L29 28 Q29 34 20 34 Q11 34 11 28 L11 14 Z" fill="url(#lbodyGrad)" />
+  <path d="M11 15 L9.5 8 L15 13.5 Z" fill="url(#ltuftGrad)" />
+  <path d="M29 15 L30.5 8 L25 13.5 Z" fill="url(#ltuftGrad)" />
+  <circle cx="15.5" cy="19" r="4.4" fill="#0D0D1E" />
+  <circle cx="15.5" cy="19" r="2.6" fill="white" opacity="0.96" />
+  <circle cx="16.2" cy="18.4" r="1.0" fill="#0D0D1E" />
+  <circle cx="24.5" cy="19" r="4.4" fill="#0D0D1E" />
+  <circle cx="24.5" cy="19" r="2.6" fill="white" opacity="0.96" />
+  <circle cx="25.2" cy="18.4" r="1.0" fill="#0D0D1E" />
+  <path d="M20 23 L17.5 26.5 L22.5 26.5 Z" fill="url(#lbeakGrad)" />
+
+  <!-- Vertical divider -->
+  <line x1="50" y1="10" x2="50" y2="30" stroke="rgba(255,255,255,0.12)" stroke-width="1" />
+
+  <!-- Wordmark -->
+  <text
+    x="60" y="26"
+    font-family="Inter, -apple-system, BlinkMacSystemFont, sans-serif"
+    font-weight="700"
+    font-size="18"
+    letter-spacing="-0.035em"
+    fill="white"
+  >STRIXORA</text>
+  <text
+    x="188" y="26"
+    font-family="Inter, -apple-system, BlinkMacSystemFont, sans-serif"
+    font-weight="400"
+    font-size="18"
+    letter-spacing="-0.02em"
+    fill="rgba(255,255,255,0.36)"
+  >LABS</text>
+
+  <defs>
+    <linearGradient id="lbodyGrad" x1="11" y1="8" x2="30" y2="34" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#818CF8" />
+      <stop offset="100%" stop-color="#3730A3" />
+    </linearGradient>
+    <linearGradient id="ltuftGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#C7D2FE" />
+      <stop offset="100%" stop-color="#A5B4FC" />
+    </linearGradient>
+    <linearGradient id="lbeakGrad" x1="17.5" y1="23" x2="22.5" y2="26.5" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FDE68A" />
+      <stop offset="100%" stop-color="#F59E0B" />
+    </linearGradient>
+  </defs>
+</svg>

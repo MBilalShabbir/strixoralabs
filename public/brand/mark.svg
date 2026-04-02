@@ -1,0 +1,55 @@
+<svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Strixora Labs mark">
+  <!--
+    STRIXORA LABS — Primary Owl Mark
+    Transparent background. Use on dark surfaces.
+    Minimum display size: 20×20px
+  -->
+
+  <!-- Body: geometric trapezoid — wide shoulder, tapers to base -->
+  <path
+    d="M20 8 L29 14 L29 28 Q29 34 20 34 Q11 34 11 28 L11 14 Z"
+    fill="url(#bodyGrad)"
+  />
+
+  <!-- Left ear tuft -->
+  <path d="M11 15 L9.5 8 L15 13.5 Z" fill="url(#tuftGrad)" />
+  <!-- Right ear tuft -->
+  <path d="M29 15 L30.5 8 L25 13.5 Z" fill="url(#tuftGrad)" />
+
+  <!-- Left eye socket -->
+  <circle cx="15.5" cy="19" r="4.4" fill="#0D0D1E" />
+  <!-- Left iris -->
+  <circle cx="15.5" cy="19" r="2.6" fill="white" opacity="0.96" />
+  <!-- Left pupil -->
+  <circle cx="16.2" cy="18.4" r="1.0" fill="#0D0D1E" />
+  <!-- Left catchlight -->
+  <circle cx="15.0" cy="17.8" r="0.4" fill="rgba(165,180,252,0.7)" />
+
+  <!-- Right eye socket -->
+  <circle cx="24.5" cy="19" r="4.4" fill="#0D0D1E" />
+  <!-- Right iris -->
+  <circle cx="24.5" cy="19" r="2.6" fill="white" opacity="0.96" />
+  <!-- Right pupil -->
+  <circle cx="25.2" cy="18.4" r="1.0" fill="#0D0D1E" />
+  <!-- Right catchlight -->
+  <circle cx="24.0" cy="17.8" r="0.4" fill="rgba(165,180,252,0.7)" />
+
+  <!-- Beak -->
+  <path d="M20 23 L17.5 26.5 L22.5 26.5 Z" fill="url(#beakGrad)" />
+
+  <defs>
+    <linearGradient id="bodyGrad" x1="11" y1="8" x2="30" y2="34" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#818CF8" />
+      <stop offset="45%" stop-color="#6366F1" />
+      <stop offset="100%" stop-color="#3730A3" />
+    </linearGradient>
+    <linearGradient id="tuftGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#C7D2FE" />
+      <stop offset="100%" stop-color="#A5B4FC" />
+    </linearGradient>
+    <linearGradient id="beakGrad" x1="17.5" y1="23" x2="22.5" y2="26.5" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FDE68A" />
+      <stop offset="100%" stop-color="#F59E0B" />
+    </linearGradient>
+  </defs>
+</svg>

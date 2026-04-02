@@ -1,0 +1,23 @@
+<svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Strixora Labs mark">
+  <!--
+    STRIXORA LABS — Monochrome Mark
+    White version. Use on colored/photographic backgrounds, print, embossing.
+  -->
+
+  <path d="M20 8 L29 14 L29 28 Q29 34 20 34 Q11 34 11 28 L11 14 Z" fill="white" opacity="0.95" />
+  <path d="M11 15 L9.5 8 L15 13.5 Z" fill="white" opacity="0.6" />
+  <path d="M29 15 L30.5 8 L25 13.5 Z" fill="white" opacity="0.6" />
+
+  <!-- Left eye -->
+  <circle cx="15.5" cy="19" r="4.4" fill="rgba(0,0,0,0.55)" />
+  <circle cx="15.5" cy="19" r="2.6" fill="white" />
+  <circle cx="16.2" cy="18.4" r="1.0" fill="rgba(0,0,0,0.6)" />
+
+  <!-- Right eye -->
+  <circle cx="24.5" cy="19" r="4.4" fill="rgba(0,0,0,0.55)" />
+  <circle cx="24.5" cy="19" r="2.6" fill="white" />
+  <circle cx="25.2" cy="18.4" r="1.0" fill="rgba(0,0,0,0.6)" />
+
+  <!-- Beak -->
+  <path d="M20 23 L17.5 26.5 L22.5 26.5 Z" fill="rgba(255,255,255,0.5)" />
+</svg>
